@@ -1,5 +1,5 @@
 # MGMob 接入文档
-MGMob 聚合了 Baidu、Gdt、Csj、Mango 四种平台的广告
+MGMob 聚合了 激励视频和积分墙任务 四种平台的广告
 
 ### 添加 SDK 到工程中
 - 添加如下依赖
@@ -7,31 +7,35 @@ MGMob 聚合了 Baidu、Gdt、Csj、Mango 四种平台的广告
 ```
 allprojects {
     repositories {
-        maven { url "https://dl.bintray.com/openppeace/maven" }//MGmob-SDK:maven地址
-    }
+           maven { url 'https://jitpack.io' }
+       }
 }
 ```
 app目录下build.gradle文件中添加：
 ```
 dependencies {
-        implementation rootProject.ext.dependencies["appcompat-v7"]
-        implementation rootProject.ext.dependencies["recyclerview-v7"]
-        implementation 'com.android.support:multidex:1.0.3'
-        implementation 'com.openppeace.mgmob:csj:1.3.5' //穿山甲（ 头条 ）
-        implementation 'com.openppeace.mgmob:baidu:1.3.5' //百青藤 ( 百度 Mob )
-        implementation 'com.openppeace.mgmob:gdt:1.3.5' //优量汇（ 腾讯广点通 ）
-        //------------------------集成方式1------------------------------//
-        implementation 'com.openppeace.mgmob:mgmob:1.3.2-alpha9'//MGMob
-        //------------------------集成方式2------------------------------//
-    //    implementation files('libs\\mgmob-1.3.2-alpha9.aar')
-    //    implementation 'org.greenrobot:eventbus:3.2.0'//事件分发
-    //    implementation 'com.google.code.gson:gson:2.8.6'//数据解析
-    //    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar'//权限请求
-    //    implementation 'com.kk.taurus.playerbase:playerbase:3.3.5'  //视频播放器
-    //    implementation 'com.just.agentweb:agentweb:4.1.3'//网页加载
-    //    implementation 'com.download.library:Downloader:4.1.3'//下载
-    //    implementation 'com.github.bumptech.glide:glide:4.5.0'//图片加载
-    //    implementation 'com.liulishuo.filedownloader:library:1.7.7'//下载jar
+    api 'com.android.support.constraint:constraint-layout:1.1.3'
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:recyclerview-v7:28.0.0'
+
+    api 'com.android.support:multidex:1.0.3'
+    api 'com.squareup.retrofit2:retrofit:2.6.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.6.0'
+    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+    api 'com.google.code.gson:gson:2.8.6'//数据解析
+    api 'io.reactivex.rxjava2:rxjava:2.2.10'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    api 'org.greenrobot:eventbus:3.2.0'//事件分发
+    api 'com.blankj:utilcode:1.29.0'
+
+    api 'com.kk.taurus.playerbase:playerbase:3.3.5'  //视频播放器
+    api 'com.just.agentweb:agentweb:4.1.3'//网页加载
+    api 'com.download.library:Downloader:4.1.3'//下载
+    api 'com.github.bumptech.glide:glide:4.5.0'//图片加载
+    api 'com.liulishuo.filedownloader:library:1.7.7'//下载jar
+    api 'com.github.mangosdk:Ad_Core:1.0.0'
+    api 'com.github.mangosdk:MGMob:1.0.1'
 }
 ```
 
