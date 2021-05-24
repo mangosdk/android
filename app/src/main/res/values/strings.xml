@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MgMob</string>
+    <!--积分墙标题-->
+    <string name="str_mgmob_integral_wall_title">贺兴波</string>
+    <!--积分墙tab-左边文字-->
+    <string name="str_mgmob_tab_left">试玩</string>
+    <!--积分墙tab-右边文字-->
+    <string name="str_mgmob_tab_right">点击</string>
+</resources>
